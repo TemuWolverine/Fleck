@@ -7,7 +7,7 @@ namespace Fleck.Helpers
     {
         public static bool IsRunningOnMono()
         {
-            return Type.GetType("Mono.Runtime") != null;
+            return !OperatingSystem.IsWindows();
         }
 
         public static bool IsRunningOnWindows()
